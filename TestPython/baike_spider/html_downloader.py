@@ -1,5 +1,5 @@
 
-import urllib
+from urllib import request
 
 
 class HtmlDownloader(object):
@@ -9,7 +9,7 @@ class HtmlDownloader(object):
         if url is None:
             return None
         
-        response = urllib.request.urlopen(url)
+        response = request.urlopen(url)
         
         if response.getcode() != 200:
             return None
